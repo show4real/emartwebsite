@@ -13,21 +13,17 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 top-nav mb-3">
-                <ul class="nav nav-tabsa custom-tabsa border-0 bg-white rounded overflow-hidden shadow-sm p-2 c-t-order"
-                    id="myTab" role="tablist">
+                <ul class="nav nav-tabsa custom-tabsa border-0 bg-white rounded overflow-hidden shadow-sm p-2 c-t-order" id="myTab" role="tablist">
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link border-0 text-dark py-3 active" href="{{url('my_order')}}"> <i
-                                    class="feather-check mr-2 text-success mb-0"></i>
+                        <a class="nav-link border-0 text-dark py-3 active" href="{{url('my_order')}}"> <i class="feather-check mr-2 text-success mb-0"></i>
                             {{trans('lang.completed')}}</a>
                     </li>
                     <li class="nav-item border-top" role="presentation">
-                        <a class="nav-link border-0 text-dark py-3" href="{{url('my_order')}}"> <i
-                                    class="feather-clock mr-2 text-warning mb-0"></i>
+                        <a class="nav-link border-0 text-dark py-3" href="{{url('my_order')}}"> <i class="feather-clock mr-2 text-warning mb-0"></i>
                             {{trans('lang.on_progress')}}</a>
                     </li>
                     <li class="nav-item border-top" role="presentation">
-                        <a class="nav-link border-0 text-dark py-3" href="{{url('my_order')}}"> <i
-                                    class="feather-x-circle mr-2 text-danger mb-0"></i>
+                        <a class="nav-link border-0 text-dark py-3" href="{{url('my_order')}}"> <i class="feather-x-circle mr-2 text-danger mb-0"></i>
                             {{trans('lang.canceled')}}</a>
                     </li>
                 </ul>
@@ -53,8 +49,7 @@
                                                     : </strong><span id="order-status"></span></label>
                                         </div>
                                         <div class="form-group widt-100 gendetail-col">
-                                            <label class="control-label"><strong>{{trans('lang.order_type')}}: </strong><span
-                                                        id="order-type"></span></label>
+                                            <label class="control-label"><strong>{{trans('lang.order_type')}}: </strong><span id="order-type"></span></label>
                                         </div>
                                     </div>
 
@@ -75,7 +70,7 @@
                                             <!-- <a href="#" class="text-primary ml-auto text-decoration-none">Review</a> -->
                                             <!-- 	<a href="javascript:void(0);" class="btn btn-outline-secondary btn-sm text-primary ml-auto text-decoration-none" data-toggle="modal" data-target="#review_order" style="pointer-events: none">Review</a>  -->
 
-                                        <!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#reviewModel" id="review_btn">
+                                            <!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#reviewModel" id="review_btn">
 												{{trans('lang.add_review')}}
                                                 </button>-->
                                         </div>
@@ -88,7 +83,7 @@
                         <div class="p-3 border-bottom order-secdetail">
                             <div class="row">
                                 <div class="col-6">
-                                <!-- <div class="vendor-details-box">
+                                    <!-- <div class="vendor-details-box">
 																<h6 class="font-weight-bold">{{trans('lang.vendor')}}</h6>
 															<div id="vendor-details"></div>
 									</div> -->
@@ -101,8 +96,7 @@
                                                 <div class="card-body">
                                                     <a href="#" class="row redirecttopage" id="resturant-view">
                                                         <div class="col-4">
-                                                            <img src="" class="resturant-img rounded-circle"
-                                                                 alt="vendor" width="70px" height="70px">
+                                                            <img src="" class="resturant-img rounded-circle" alt="vendor" width="70px" height="70px">
                                                         </div>
                                                         <div class="col-8">
                                                             <h4 class="vendor-title"></h4>
@@ -135,8 +129,7 @@
                                                 <div class="card-body">
                                                     <a href="#" class="row redirecttopage" id="resturant-view">
                                                         <div class="col-4">
-                                                            <img src="" class="driver-img rounded-circle" alt="driver"
-                                                                 width="70px" height="70px">
+                                                            <img src="" class="driver-img rounded-circle" alt="driver" width="70px" height="70px">
                                                         </div>
                                                         <div class="col-8">
                                                             <h4 class="driver-name-title"></h4>
@@ -276,19 +269,16 @@
                                     <p class="font-weight-bold small mb-1">
                                         {{trans('lang.courier')}}
                                     </p>
-                                    <img alt="#" src="img/logo_web.png" class="img-fluid sc-siddhi-logo mr-2"><span
-                                            class="small text-primary font-weight-bold">{{trans('lang.grocery_courier')}} </span>
+                                    <img alt="#" src="img/emart2.png" class="img-fluid sc-siddhi-logo mr-2"><span class="small text-primary font-weight-bold">{{trans('lang.grocery_courier')}} </span>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="modal fade" id="reviewModel" tabindex="-1" role="dialog"
-                             aria-labelledby="reviewModelLabel" aria-hidden="true">
+                        <div class="modal fade" id="reviewModel" tabindex="-1" role="dialog" aria-labelledby="reviewModelLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title"
-                                            id="exampleModalLabel">{{trans('lang.review_order')}}</h5>
+                                        <h5 class="modal-title" id="exampleModalLabel">{{trans('lang.review_order')}}</h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
@@ -300,47 +290,17 @@
                                                 <div class="rating-wrap d-flex align-items-center mt-4 mb-3" id="#">
 
                                                     <fieldset class="rating rate_this">
-                                                        <input type="radio" class="main_rating" name="rating" id="star5"
-                                                               value="5"/><label
-                                                                for="star5"
-                                                                class="full"></label>
-                                                        <input type="radio" class="main_rating" name="rating"
-                                                               id="star4.5"
-                                                               value="4.5"/><label
-                                                                for="star4.5" class="half"></label>
-                                                        <input type="radio" class="main_rating" name="rating" id="star4"
-                                                               value="4"/><label
-                                                                for="star4"
-                                                                class="full"></label>
-                                                        <input type="radio" class="main_rating" name="rating"
-                                                               id="star3.5"
-                                                               value="3.5"/><label
-                                                                for="star3.5" class="half"></label>
-                                                        <input type="radio" class="main_rating" name="rating" id="star3"
-                                                               value="3"/><label
-                                                                for="star3"
-                                                                class="full"></label>
-                                                        <input type="radio" class="main_rating" name="rating"
-                                                               id="star2.5"
-                                                               value="2.5"/><label
-                                                                for="star2.5" class="half"></label>
-                                                        <input type="radio" class="main_rating" name="rating" id="star2"
-                                                               value="2"/><label
-                                                                for="star2"
-                                                                class="full"></label>
-                                                        <input type="radio" class="main_rating" name="rating"
-                                                               id="star1.5"
-                                                               value="1.5"/><label
-                                                                for="star1.5" class="half"></label>
-                                                        <input type="radio" class="main_rating" name="rating" id="star1"
-                                                               value="1"/><label
-                                                                for="star1"
-                                                                class="full"></label>
-                                                        <input type="radio" class="main_rating" name="rating"
-                                                               id="star0.5"
-                                                               value="0.5"/><label
-                                                                for="star0.5" class="half"></label>
-                                                        <input type="hidden" value="0" id="rating-value"/>
+                                                        <input type="radio" class="main_rating" name="rating" id="star5" value="5" /><label for="star5" class="full"></label>
+                                                        <input type="radio" class="main_rating" name="rating" id="star4.5" value="4.5" /><label for="star4.5" class="half"></label>
+                                                        <input type="radio" class="main_rating" name="rating" id="star4" value="4" /><label for="star4" class="full"></label>
+                                                        <input type="radio" class="main_rating" name="rating" id="star3.5" value="3.5" /><label for="star3.5" class="half"></label>
+                                                        <input type="radio" class="main_rating" name="rating" id="star3" value="3" /><label for="star3" class="full"></label>
+                                                        <input type="radio" class="main_rating" name="rating" id="star2.5" value="2.5" /><label for="star2.5" class="half"></label>
+                                                        <input type="radio" class="main_rating" name="rating" id="star2" value="2" /><label for="star2" class="full"></label>
+                                                        <input type="radio" class="main_rating" name="rating" id="star1.5" value="1.5" /><label for="star1.5" class="half"></label>
+                                                        <input type="radio" class="main_rating" name="rating" id="star1" value="1" /><label for="star1" class="full"></label>
+                                                        <input type="radio" class="main_rating" name="rating" id="star0.5" value="0.5" /><label for="star0.5" class="half"></label>
+                                                        <input type="hidden" value="0" id="rating-value" />
                                                     </fieldset>
                                                 </div>
                                             </div>
@@ -349,9 +309,7 @@
                                         <div class="form-group row">
                                             <label class="col-sm-2 col-form-label">{{trans('lang.comment')}}</label>
                                             <div class="col-sm-10">
-                                                <input type="text" class="form-control review_comment"
-                                                       id="review_comment" name="review_comment"
-                                                       placeholder="Review Comment" value="">
+                                                <input type="text" class="form-control review_comment" id="review_comment" name="review_comment" placeholder="Review Comment" value="">
                                             </div>
                                         </div>
                                         <div class="form-group row">
@@ -365,10 +323,9 @@
                                             </div>
                                         </div>
                                     </div>
-                                <!-- <div class="modal-footer">
+                                    <!-- <div class="modal-footer">
 										<button type="button" class="btn btn-secondary" data-dismiss="modal">{{trans('lang.close')}}</button> -->
-                                    <button type="button" class="btn btn-primary add_review_btn"
-                                            data-parent="modal-body">{{trans('lang.add_review')}}</button>
+                                    <button type="button" class="btn btn-primary add_review_btn" data-parent="modal-body">{{trans('lang.add_review')}}</button>
                                     <!-- </div> -->
                                 </div>
                             </div>
@@ -390,8 +347,6 @@
 
 
 <script type="text/javascript">
-
-
     var orderId = "<?php echo $_GET['id']; ?>";
     var append_categories = '';
     var completedorsersref = database.collection('vendor_orders').where('id', "==", orderId);
@@ -401,15 +356,15 @@
     var orderVendorId = '';
     var reviewUserName = '';
     var reviewUserProfile = '';
-    $(document).ready(function () {
+    $(document).ready(function() {
         getOrderDetails();
 
-        $(document).on('shown.bs.modal', '#reviewModel', function () {
+        $(document).on('shown.bs.modal', '#reviewModel', function() {
             var pid = $(this).attr('data-pid');
             var cid = $(this).attr('data-cid');
             if (pid && cid) {
 
-                database.collection('vendor_categories').doc(cid).get().then(async function (snapshots) {
+                database.collection('vendor_categories').doc(cid).get().then(async function(snapshots) {
                     var catData = snapshots.data();
 
                     database.collection('items_review').where('orderid', '==', orderId).where('productId', '==', pid).get().then((docSnapshot) => {
@@ -423,7 +378,7 @@
                             $("#reviewModel").find('#review_comment').val(itemReviewDoc.comment);
 
                             if (itemReviewDoc.photos.length > 0) {
-                                $.each(itemReviewDoc.photos, function (key, url) {
+                                $.each(itemReviewDoc.photos, function(key, url) {
                                     $("#uploded_image ul").append('<li><img src="' + url + '" width="100"><span class="mdi mdi-delete" onerror="this.onerror=null; this.remove();" data-url="' + url + '">X</span></li>');
                                     reviewOrderImage.push(url);
                                 });
@@ -434,7 +389,7 @@
 
 
                         if (catData.review_attributes) {
-                            database.collection('review_attributes').where('id', "in", catData.review_attributes).get().then(async function (docsSnap) {
+                            database.collection('review_attributes').where('id', "in", catData.review_attributes).get().then(async function(docsSnap) {
                                 var html = '';
                                 var count = 0;
 
@@ -578,23 +533,23 @@
 
         });
 
-        $(document).on('click', '.item_review_btn', function () {
+        $(document).on('click', '.item_review_btn', function() {
             $("#reviewModel").attr('data-pid', $(this).data('pid')).attr('data-cid', $(this).data('cid')).modal("show");
         });
 
-        $(document).on('hide.bs.modal', '#reviewModel', function () {
+        $(document).on('hide.bs.modal', '#reviewModel', function() {
             $(this).removeAttr('data-pid').removeAttr('data-cid');
             $(this).find("#attribute_review").empty();
             $(this).find('#review_comment').val('');
             $(this).find('#uploded_image ul').empty();
         });
 
-        jQuery(document).on("click", ".mdi-delete", function () {
+        jQuery(document).on("click", ".mdi-delete", function() {
             var url = jQuery(this).data('url');
             if (url) {
                 firebase.storage().refFromURL(url).delete();
                 jQuery(this).parent().remove();
-                reviewOrderImage = $.grep(reviewOrderImage, function (value) {
+                reviewOrderImage = $.grep(reviewOrderImage, function(value) {
                     return value != url;
                 });
             }
@@ -604,7 +559,7 @@
     var star = document.querySelectorAll('input[name="rating"]');
 
     for (var i = 0; i < star.length; i++) {
-        star[i].addEventListener('click', function () {
+        star[i].addEventListener('click', function() {
 
             var rating = this.value;
             $('#rating-value').val(rating);
@@ -614,7 +569,7 @@
         })
     }
 
-    $(document).on('click', '.rating_attribute', function () {
+    $(document).on('click', '.rating_attribute', function() {
 
         var rating = this.value;
 
@@ -723,9 +678,12 @@
 
     });
 
-    $(".add_review_btn").click(function () {
+    $(".add_review_btn").click(function() {
 
-        $(this).css({'opacity': 0.5, 'cursor': 'default'});
+        $(this).css({
+            'opacity': 0.5,
+            'cursor': 'default'
+        });
         var pclass = $(this).data('parent');
         var default_review = $('.' + pclass).find('#default_review');
         var attribute_review = $('.' + pclass).find('#attribute_review');
@@ -735,11 +693,14 @@
         var reviewAttributes = {};
         var reviewAttributes2 = {};
         if (attribute_review.children().length > 0) {
-            attribute_review.find('.rating-block > li').each(function (li) {
+            attribute_review.find('.rating-block > li').each(function(li) {
                 var id = $(this).attr('data-id');
                 var value = $(this).attr('data-rating');
                 reviewAttributes[id] = parseFloat(value);
-                reviewAttributes2[id] = {'reviewsCount': 1, 'reviewsSum': value};
+                reviewAttributes2[id] = {
+                    'reviewsCount': 1,
+                    'reviewsSum': value
+                };
             });
         }
 
@@ -771,7 +732,7 @@
                 });
 
                 vendor_data = vendor.where('id', "==", VendorId);
-                vendor_data.get().then(async function (snapshots) {
+                vendor_data.get().then(async function(snapshots) {
                     if (snapshots.docs[0]) {
                         vendor = snapshots.docs[0].data();
                         var reviewsCount = 0;
@@ -794,7 +755,7 @@
                 });
 
                 product_data = vendor_products.where('id', "==", productId);
-                product_data.get().then(async function (snapshots) {
+                product_data.get().then(async function(snapshots) {
                     if (snapshots.docs[0]) {
                         product = snapshots.docs[0].data();
                         var reviewsCount = 0;
@@ -813,12 +774,15 @@
                         if (product.reviewAttributes != undefined && product.reviewAttributes != '') {
                             var resetReviewAtrributes = {};
                             productreviewAttributes = product.reviewAttributes;
-                            $.each(productreviewAttributes, function (key, data) {
+                            $.each(productreviewAttributes, function(key, data) {
                                 var reviewsCount = data.reviewsCount - 1;
                                 var reviewsSum = data.reviewsSum - itemReviewDoc.reviewAttributes[key];
                                 reviewsCount = reviewsCount + 1
                                 reviewsSum = reviewsSum + reviewAttributes[key];
-                                resetReviewAtrributes[key] = {'reviewsCount': reviewsCount, 'reviewsSum': reviewsSum};
+                                resetReviewAtrributes[key] = {
+                                    'reviewsCount': reviewsCount,
+                                    'reviewsSum': reviewsSum
+                                };
                             });
                             reviewAttributes = resetReviewAtrributes;
                         } else {
@@ -833,7 +797,7 @@
                             'reviewsCount': reviewsCount,
                             'reviewsSum': reviewsSum,
                             'reviewAttributes': reviewAttributes
-                        }).then(function (result) {
+                        }).then(function(result) {
                             location.reload();
                         });
                     }
@@ -856,9 +820,9 @@
                     'profile': userProfile,
                     'reviewAttributes': reviewAttributes,
                     'createdAt': timeStamp
-                }).then(function (result) {
+                }).then(function(result) {
                     vendor_data = vendor.where('id', "==", VendorId);
-                    vendor_data.get().then(async function (snapshots) {
+                    vendor_data.get().then(async function(snapshots) {
                         if (snapshots.docs[0]) {
                             vendor = snapshots.docs[0].data();
                             var reviewsCount = 0;
@@ -879,7 +843,7 @@
                     });
 
                     product_data = vendor_products.where('id', "==", productId);
-                    product_data.get().then(async function (snapshots) {
+                    product_data.get().then(async function(snapshots) {
                         if (snapshots.docs[0]) {
                             product = snapshots.docs[0].data();
                             var reviewsCount = 0;
@@ -896,7 +860,7 @@
                             if (product.reviewAttributes != undefined && product.reviewAttributes != '') {
                                 var resetReviewAtrributes = {};
                                 productreviewAttributes = product.reviewAttributes;
-                                $.each(productreviewAttributes, function (key, data) {
+                                $.each(productreviewAttributes, function(key, data) {
                                     var reviewsCount = data.reviewsCount + 1
                                     var reviewsSum = data.reviewsSum + reviewAttributes[key];
                                     resetReviewAtrributes[key] = {
@@ -917,7 +881,7 @@
                                 'reviewsCount': reviewsCount,
                                 'reviewsSum': reviewsSum,
                                 'reviewAttributes': reviewAttributes
-                            }).then(function (result) {
+                            }).then(function(result) {
                                 location.reload();
                             });
                         }
@@ -931,7 +895,7 @@
 
     var place_image = '';
     var ref_place = database.collection('settings').doc("placeHolderImage");
-    ref_place.get().then(async function (snapshots) {
+    ref_place.get().then(async function(snapshots) {
         var placeHolderImage = snapshots.data();
         place_image = placeHolderImage.image;
 
@@ -942,7 +906,7 @@
     var decimal_degits = 0;
 
     var refCurrency = database.collection('currencies').where('isActive', '==', true);
-    refCurrency.get().then(async function (snapshots) {
+    refCurrency.get().then(async function(snapshots) {
         var currencyData = snapshots.docs[0].data();
         currentCurrency = currencyData.symbol;
         currencyAtRight = currencyData.symbolAtRight;
@@ -956,7 +920,7 @@
     async function getOrderDetails() {
 
 
-        completedorsersref.get().then(async function (completedorderSnapshots) {
+        completedorsersref.get().then(async function(completedorderSnapshots) {
 
 
             var orderDetails = completedorderSnapshots.docs[0].data();
@@ -1084,7 +1048,7 @@
                     if (orderDetails.products[i]['variant_info']) {
                         variant_info += '<div class="variant-info">';
                         variant_info += '<ul>';
-                        $.each(orderDetails.products[i]['variant_info']['variant_options'], function (label, value) {
+                        $.each(orderDetails.products[i]['variant_info']['variant_options'], function(label, value) {
                             variant_info += '<li class="variant"><span class="label">' + label + '</span><span class="value">' + value + '</span></li>';
                         });
                         variant_info += '</ul>';
@@ -1344,8 +1308,8 @@
             return false;
         }
 
-        reader.onload = (function (theFile) {
-            return function (e) {
+        reader.onload = (function(theFile) {
+            return function(e) {
 
                 var filePayload = e.target.result;
                 var hash = CryptoJS.SHA256(Math.random() + CryptoJS.SHA256(filePayload));
@@ -1358,24 +1322,23 @@
 
                 var uploadTask = storageRef.child(filename).put(theFile);
 
-                uploadTask.on('state_changed', function (snapshot) {
+                uploadTask.on('state_changed', function(snapshot) {
                     var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
                     console.log('Upload is ' + progress + '% done');
                     jQuery("#uploding_image").text("Image is uploading...");
-                }, function (error) {
-                }, function () {
-                    uploadTask.snapshot.ref.getDownloadURL().then(function (downloadURL) {
+                }, function(error) {}, function() {
+                    uploadTask.snapshot.ref.getDownloadURL().then(function(downloadURL) {
                         jQuery("#uploding_image").text("Upload is completed");
 
                         if (jQuery("#uploded_image ul").length > 0 && reviewOrderImage.length == 0) {
-                            jQuery("#uploded_image ul li").each(function () {
+                            jQuery("#uploded_image ul li").each(function() {
                                 reviewOrderImage.push($(this).find('img').attr('src'));
                             });
                         }
                         reviewOrderImage.push(downloadURL);
 
                         jQuery("#uploded_image ul").append('<li><img src="' + downloadURL + '" width="100"><span class="mdi mdi-delete" data-url="' + downloadURL + '">X</span></li>');
-                        setTimeout(function () {
+                        setTimeout(function() {
                             jQuery("#uploding_image").empty();
                         }, 1000);
                     });
@@ -1385,5 +1348,4 @@
         })(f);
         reader.readAsDataURL(f);
     }
-
 </script>

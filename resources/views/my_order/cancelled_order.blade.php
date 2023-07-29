@@ -10,26 +10,22 @@
     </div>
 </div>
 <section class="py-4 siddhi-main-body">
-<div id="data-table_processing" class="dataTables_processing panel panel-default" style="display: none;">{{trans('lang.processing')}}...</div>
+    <div id="data-table_processing" class="dataTables_processing panel panel-default" style="display: none;">{{trans('lang.processing')}}...</div>
 
     <div class="container">
         <div class="row">
             <div class="col-md-12 top-nav mb-3">
-                <ul class="nav nav-tabsa custom-tabsa border-0 bg-white rounded overflow-hidden shadow-sm p-2 c-t-order"
-                    id="myTab" role="tablist">
+                <ul class="nav nav-tabsa custom-tabsa border-0 bg-white rounded overflow-hidden shadow-sm p-2 c-t-order" id="myTab" role="tablist">
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link border-0 text-dark py-3" href="{{url('my_order')}}"> <i
-                                    class="feather-check mr-2 text-success mb-0"></i>
+                        <a class="nav-link border-0 text-dark py-3" href="{{url('my_order')}}"> <i class="feather-check mr-2 text-success mb-0"></i>
                             {{trans('lang.completed')}}</a>
                     </li>
                     <li class="nav-item border-top" role="presentation">
-                        <a class="nav-link border-0 text-dark py-3" href="{{url('my_order')}}"> <i
-                                    class="feather-clock mr-2 text-warning mb-0"></i>
+                        <a class="nav-link border-0 text-dark py-3" href="{{url('my_order')}}"> <i class="feather-clock mr-2 text-warning mb-0"></i>
                             {{trans('lang.on_progress')}}</a>
                     </li>
                     <li class="nav-item border-top" role="presentation">
-                        <a class="nav-link border-0 text-dark py-3 active" href="{{url('my_order')}}"> <i
-                                    class="feather-x-circle mr-2 text-danger mb-0"></i>
+                        <a class="nav-link border-0 text-dark py-3 active" href="{{url('my_order')}}"> <i class="feather-x-circle mr-2 text-danger mb-0"></i>
                             {{trans('lang.canceled')}}</a>
                     </li>
                 </ul>
@@ -86,7 +82,7 @@
                         <div class="p-3 border-bottom order-secdetail">
                             <div class="row">
                                 <div class="col-6">
-                                <!-- <div class="vendor-details-box">
+                                    <!-- <div class="vendor-details-box">
 																<h6 class="font-weight-bold">{{trans('lang.vendor')}}</h6>
 															<div id="vendor-details"></div>
 									</div> -->
@@ -99,8 +95,7 @@
                                                 <div class="card-body">
                                                     <a href="#" class="row redirecttopage" id="resturant-view">
                                                         <div class="col-4">
-                                                            <img src="" class="resturant-img rounded-circle"
-                                                                 alt="vendor" width="70px" height="70px">
+                                                            <img src="" class="resturant-img rounded-circle" alt="vendor" width="70px" height="70px">
                                                         </div>
                                                         <div class="col-8">
                                                             <h4 class="vendor-title"></h4>
@@ -231,8 +226,7 @@
                                     <p class="font-weight-bold small mb-1">
                                         {{trans('lang.courier')}}
                                     </p>
-                                    <img alt="#" src="img/logo_web.png" class="img-fluid sc-siddhi-logo mr-2"><span
-                                            class="small text-primary font-weight-bold">{{trans('lang.grocery_courier')}} </span>
+                                    <img alt="#" src="img/emart2.png" class="img-fluid sc-siddhi-logo mr-2"><span class="small text-primary font-weight-bold">{{trans('lang.grocery_courier')}} </span>
                                 </div>
                             </div>
                         </div>
@@ -252,22 +246,20 @@
 
 
 <script type="text/javascript">
-
-
     var orderId = "<?php echo $_GET['id']; ?>";
     var append_categories = '';
     var completedorsersref = database.collection('vendor_orders').where('id', "==", orderId);
-    $(document).ready(function () {
-       
+    $(document).ready(function() {
+
         $(".dataTables_processing").show();
         getOrderDetails();
-      
+
 
     });
 
     var place_image = '';
     var ref_place = database.collection('settings').doc("placeHolderImage");
-    ref_place.get().then(async function (snapshots) {
+    ref_place.get().then(async function(snapshots) {
         var placeHolderImage = snapshots.data();
         place_image = placeHolderImage.image;
 
@@ -278,7 +270,7 @@
     var decimal_degits = 0;
 
     var refCurrency = database.collection('currencies').where('isActive', '==', true);
-    refCurrency.get().then(async function (snapshots) {
+    refCurrency.get().then(async function(snapshots) {
         var currencyData = snapshots.docs[0].data();
         currentCurrency = currencyData.symbol;
         currencyAtRight = currencyData.symbolAtRight;
@@ -291,7 +283,7 @@
     async function getOrderDetails() {
 
 
-        completedorsersref.get().then(async function (completedorderSnapshots) {
+        completedorsersref.get().then(async function(completedorderSnapshots) {
 
 
             var orderDetails = completedorderSnapshots.docs[0].data();
@@ -437,7 +429,7 @@
                     if (orderDetails.products[i]['variant_info']) {
                         variant_info += '<div class="variant-info">';
                         variant_info += '<ul>';
-                        $.each(orderDetails.products[i]['variant_info']['variant_options'], function (label, value) {
+                        $.each(orderDetails.products[i]['variant_info']['variant_options'], function(label, value) {
                             variant_info += '<li class="variant"><span class="label">' + label + '</span><span class="value">' + value + '</span></li>';
                         });
                         variant_info += '</ul>';
@@ -654,13 +646,11 @@
                     $("#order-note").html(orderDetails.notes);
                 }
 
- jQuery("#data-table_processing").hide();
+                jQuery("#data-table_processing").hide();
             }
 
 
         })
 
     }
-
-
 </script>
